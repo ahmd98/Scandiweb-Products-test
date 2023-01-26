@@ -17,7 +17,7 @@ class Furniture extends Product
         ) {
             return "Error, dimensions must be positive number";
         } else {
-            $this->value = $this->data['height'] . 'X' . $this->data['width'] . 'X' . $this->data['length'] . "CM";
+            $this->value = "Dimensions: " . $this->data['height'] . 'X' . $this->data['width'] . 'X' . $this->data['length'] . "CM";
         }
     }
 }

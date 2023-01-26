@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container-fluid ">
-    <a class="navbar-brand " href="/">PRODUCT LIST</a>
+    <a class="navbar-brand " href="/">Product Add</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,13 +17,13 @@
     </div>
   </nav>
   <?php if (!empty($errors)) { ?>
-                <div class="container mb-5 alert alert-danger">
-                   <ul class="m-0">
-                    <?php foreach ($errors as $error): ?>
-                                     <li><?= $error ?></li>
-                       <?php endforeach; ?>
-                       </ul>
-                 </div>
+                    <div class="container mb-5 alert alert-danger">
+                       <ul class="m-0">
+                        <?php foreach ($errors as $error): ?>
+                                             <li><?= $error ?></li>
+                           <?php endforeach; ?>
+                           </ul>
+                     </div>
 <?php } ?>
 <div class="container mt-5">
 <form id="product_form"  method="POST">
@@ -69,8 +69,8 @@
   <div class="length mb-3">
     <label for="length" >Length (CM)</label>
     <input type="number" name='length' id="length" placeholder="#length" value="<?php echo $_POST['length'] ?? '' ?>" >
-  <span class="form-text">Please, provide dimensions.</span>
   </div>
+  <span class="form-text">Please, provide dimensions.</span>
   </div>
   <div class="book-container">
 <div class="weight mb-3">

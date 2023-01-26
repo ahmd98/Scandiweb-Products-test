@@ -12,7 +12,7 @@ class DVD extends Product
         } else if ($this->data['size'] < 0) {
             return "Error, size must be a positive number";
         } else {
-            $this->value = $this->data['size'] . ' MB';
+            $this->value = "Size: " . $this->data['size'] . ' MB';
         }
     }
 }
