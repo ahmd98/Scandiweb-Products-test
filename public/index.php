@@ -1,10 +1,6 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 use app\controller\ProductController;
-
-$Router = '\\' . str_replace(DIRECTORY_SEPARATOR, '\\', $Router);
-
-
 use app\core\Router;
 
 $router = new Router();
