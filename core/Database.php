@@ -10,7 +10,7 @@ class Database
     private $dbname = 'scandiweb_products';
     private $user = 'root';
     private $password = '';
-    private PDO $pdo;
+    private $pdo = null;
     public function __construct()
     {
         $this->pdo = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->user, $this->password);

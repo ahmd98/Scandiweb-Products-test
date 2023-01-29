@@ -2,10 +2,6 @@
   class="navbar navbar-expand-sm navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Product List</a>
-    <button
-      class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div
       class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">
@@ -26,15 +22,15 @@
   <div class="container">
     <div class="row">
       <?php foreach ($products as $product) { ?>
-                  <div class="card">
-                    <label class="form-check-label">
-                    <input form="delete-product" type="checkbox" class="delete-checkbox form-check-input" name="product_delete_sku[]" value="<?php echo $product['sku'] ?>"/>
-                    </label>
-                      <p><?php echo $product['sku'] ?></p>
-                      <p><?php echo $product['name'] ?></p>
-                      <p><?php echo $product['price'] . "$" ?></p>
-                      <p><?php echo $product['value'] ?></p>
-                  </div>
+                    <div class="card">
+                      <label class="form-check-label">
+                      <input form="delete-product" type="checkbox" class="delete-checkbox form-check-input" name="product_delete_sku[]" value="<?php echo $product['sku'] ?>"/>
+                      </label>
+                        <p><?php echo $product['sku'] ?></p>
+                        <p><?php echo $product['name'] ?></p>
+                        <p><?php echo $product['price'] . "$" ?></p>
+                        <p><?php echo $product['value'] ?></p>
+                    </div>
       <?php } ?>
     </div>
   </div>

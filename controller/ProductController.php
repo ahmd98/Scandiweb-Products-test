@@ -16,8 +16,6 @@ class ProductController
         $router->renderView('products/product_list', [
             'products' => $db->getProducts()
         ]);
-        // $products = $router->db->getProducts();
-        // $router->renderView('products/product_list', ['products' => $products]);
     }
     public function add(Router $router)
     {

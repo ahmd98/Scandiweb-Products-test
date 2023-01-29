@@ -1,9 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container-fluid ">
     <a class="navbar-brand " href="/">Product Add</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav ">
       <li class="nav-item">
@@ -17,13 +15,13 @@
     </div>
   </nav>
   <?php if (!empty($errors)) { ?>
-                    <div class="container mb-5 alert alert-danger">
-                       <ul class="m-0">
-                        <?php foreach ($errors as $error): ?>
-                                             <li><?= $error ?></li>
-                           <?php endforeach; ?>
-                           </ul>
-                     </div>
+                            <div class="container mb-5 alert alert-danger">
+                               <ul class="m-0">
+                                <?php foreach ($errors as $error): ?>
+                                                             <li><?= $error ?></li>
+                                   <?php endforeach; ?>
+                                   </ul>
+                             </div>
 <?php } ?>
 <div class="container mt-5">
 <form id="product_form"  method="POST">
