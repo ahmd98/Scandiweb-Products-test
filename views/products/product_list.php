@@ -1,9 +1,10 @@
-<nav
-  class="navbar navbar-expand-sm navbar-light">
+<nav class="navbar navbar-expand-sm navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Product List</a>
-    <div
-      class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbar">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="btn btn-outline-primary me-2" href="/add_product">ADD</a>
@@ -22,15 +23,15 @@
   <div class="container">
     <div class="row">
       <?php foreach ($products as $product) { ?>
-                    <div class="card">
-                      <label class="form-check-label">
-                      <input form="delete-product" type="checkbox" class="delete-checkbox form-check-input" name="product_delete_sku[]" value="<?php echo $product['sku'] ?>"/>
-                      </label>
-                        <p><?php echo $product['sku'] ?></p>
-                        <p><?php echo $product['name'] ?></p>
-                        <p><?php echo $product['price'] . "$" ?></p>
-                        <p><?php echo $product['value'] ?></p>
-                    </div>
+                          <div class="card">
+                            <label class="form-check-label">
+                            <input form="delete-product" type="checkbox" class="delete-checkbox form-check-input" name="product_delete_sku[]" value="<?php echo $product['sku'] ?>"/>
+                            </label>
+                              <p><?php echo $product['sku'] ?></p>
+                              <p><?php echo $product['name'] ?></p>
+                              <p><?php echo $product['price'] . "$" ?></p>
+                              <p><?php echo $product['value'] ?></p>
+                          </div>
       <?php } ?>
     </div>
   </div>

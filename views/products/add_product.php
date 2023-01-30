@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-sm navbar-light">
     <div class="container-fluid ">
     <a class="navbar-brand " href="/">Product Add</a>
-    
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      <ul class="navbar-nav ">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbar">
+      <ul class="navbar-nav">
       <li class="nav-item">
         <button type="submit" form='product_form' id="save_btn" class="btn btn-outline-primary me-2">Save</button>
       </li>
@@ -15,13 +17,13 @@
     </div>
   </nav>
   <?php if (!empty($errors)) { ?>
-                            <div class="container mb-5 alert alert-danger">
-                               <ul class="m-0">
-                                <?php foreach ($errors as $error): ?>
-                                                             <li><?= $error ?></li>
-                                   <?php endforeach; ?>
-                                   </ul>
-                             </div>
+            <div class="container mb-5 alert alert-danger">
+                <ul class="m-0">
+                 <?php foreach ($errors as $error): ?>
+                         <li><?= $error ?></li>
+                     <?php endforeach; ?>
+                      </ul>
+            </div>
 <?php } ?>
 <div class="container mt-5">
 <form id="product_form"  method="POST">
