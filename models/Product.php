@@ -43,13 +43,13 @@ abstract class Product
         }
 
         $db = new Database();
-        if ($db->getProduct($this->data['sku'])) {
+        if (!empty($db->getProduct($this->data['sku']))) {
             return "Error,SKU already taken!";
         }
-
         $this->sku = $this->data['sku'];
         return "";
     }
+
     private function validateName()
     {
         if (!$this->data['name']) {
@@ -58,6 +58,7 @@ abstract class Product
         $this->name = $this->data['name'];
         return "";
     }
+
     private function validatePrice()
     {
         if (!$this->data['price']) {
@@ -70,6 +71,7 @@ abstract class Product
         $this->price = floatVal($this->data['price']);
         return "";
     }
+
     private function validateType()
     {
         if (!$this->data['selectType']) {
@@ -78,6 +80,7 @@ abstract class Product
         $this->type = $this->data['selectType'];
         return "";
     }
+
     abstract protected function validateValue();
 }
 ?>

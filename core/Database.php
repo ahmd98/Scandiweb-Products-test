@@ -29,7 +29,8 @@ class Database
         $SKU_statement = $this->pdo->prepare('SELECT * FROM products WHERE sku LIKE :sku');
         $SKU_statement->bindValue(':sku', $sku);
         $SKU_statement->execute();
-        return $SKU_statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $SKU_statement->fetchColumn(PDO::FETCH_ASSOC);
+        return $result;
     }
 
     public function addProducts(Product $product)
